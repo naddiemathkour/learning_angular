@@ -27,10 +27,17 @@
 **Data Binding**
 - Communication between TypeScript and HTML
 	- 3 forms:
-		- String Interpolation: From TypeScript to HTML
+		- String Interpolation: Sending data from TypeScript to HTML
 			- Saving a value in TypeScript and displaying it in HTML by using {{varName}}
 			- Binding a value in TypeScript to a Property in HTML
 				- i.e.: "img src = 'image_path'" can be binded by binding a TypeScript variable to src. The resulting code will be: <img [src] = 'varName'>
-		- Event Binding: From HTML to TypeScript
-		- Two Way Binding: From Either HTML or TypeScript to the other
+					- Note: 'src' is surrounded with square brackets
+		- Event Binding: Sending data from HTML to TypeScript based on an event
+			- Text input data can be passed with the following: <input type = 'text' (input) = 'passValueToComponent($event)' /> 
+				- Note: 'input' is surrounded with parenthesis and the corresponding TypeScript function here would be 'passValueToComponent()'
+		- Two Way Binding: Sending and recieving data between both HTML and TypeScript
+			- Angular has the capability of combining the two aformentioned data bindings into one
+			- The special directive 'ngModel' is used to fascilitate this functionality
+			- 'ngModel' needs to be imported in the root component's app.module.ts file
+			- Example: <input type = 'text' [(ngModel)] = 'varName' />
 
