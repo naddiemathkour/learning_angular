@@ -30,7 +30,7 @@
 		- String Interpolation: From TypeScript to HTML
 			- Saving a value in TypeScript and displaying it in HTML by using {{varName}}
 			- Binding a value in TypeScript to a Property in HTML
-				- i.e.: <img src = 'image_path'> can be binded by binding a TypeScript variable to src. The resulting code will be: <img [src] = 'varName'>
+				- i.e.: '<img src = 'image_path'>' can be binded by binding a TypeScript variable to src. The resulting code will be: <img [src] = 'varName'>
 		- Event Binding: From HTML to TypeScript
 		- Two Way Binding: From Either HTML or TypeScript to the other
 
