@@ -1,0 +1,25 @@
+<h1>Create Post</h1>
+<form [formGroup]="blogForm">
+  <span>Post Anonymously<input type="checkbox" (input)="flipAnon()" /></span>
+  <div *ngIf="anon">
+    Username:
+    <input formControlName="user" placeholder="Username" />
+  </div>
+  <div>
+    Topic:
+    <input formControlName="topic" placeholder="Topic" required />
+  </div>
+  <div>
+    Blog body:
+    <textarea
+      rows="10"
+      formControlName="body"
+      placeholder="Blog Body Text"
+      required
+    ></textarea>
+  </div>
+</form>
+<div>
+  <button (click)="onSave()" [disabled]="!blogForm.valid">Submit Post</button>
+  <button (click)="onCancel()">Cancel</button>
+</div>
